@@ -1,4 +1,4 @@
-import { createPlayer, deletePlayerById, getPlayer, getPlayerById, updatePlayerById } from "../controllers/playerController";
+import { createManyPlayer, createPlayer, deletePlayerById, getPlayer, getPlayerById, updatePlayerById } from "../controllers/playerController";
 
 import { Router } from "express";
 import { getClubs } from "../controllers/clubsController";
@@ -8,6 +8,7 @@ const router = Router();
 router.get("/players", getPlayer);
 router.get("/players/:id", getPlayerById);
 router.post("/players", createPlayer);
+router.post("/players/many", createManyPlayer);
 router.delete("/players/:id", deletePlayerById)
 router.patch("/players/:id", updatePlayerById)
 
